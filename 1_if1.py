@@ -21,21 +21,26 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-def check_age(Age):
-    real_age = int(Age)
-    if real_age < 6:
-        return ("Детский сад")
-    elif real_age > 7 and real_age < 18:
-        return ("Школа")
-    elif real_age > 18 and real_age < 22:
-        return "Университет"
+    real_age = int(input("Введите ваш возраст: "))
+    if real_age <= 6:
+        print("Детский сад")
+    elif 7 <= real_age < 18:
+        print("Школа")
+    elif real_age >= 18 and real_age < 22:
+        print("Университет")
     else:
-        return ("Работа")
+        print("Работа")
 
-real_age = input("Введите ваш возраст:")
-result = check_age(real_age)
-print(result)
-
+print(__name__)
 
 if __name__ == "__main__":
+    print("AAAA")
     main()
+
+
+"""
+Не нужно объявлять функции внутри функций.
+Иногда это, конечно, нужно, но точно не на том этапе изучения, на котором ты сейчас.
+Строки 36-38 можно было бы опустить под 40 строку и вызвать main с real_age и не определять check_age в принципе.
+
+"""
