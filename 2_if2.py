@@ -16,22 +16,33 @@
 """
 
 
+def two_strings(str1, str2):
+    if type(str1) is not str or type(str2) is not str:
+        return 0
+    elif str1 == str2:
+        return 1
+    elif len(str1) > len(str2):
+        return 2
+    elif str1 != str2 and str2 == "learn":
+        return 3
+
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    a = input("Введите строку: ")
-    b = input("Введите еще одну строку: ")
-    if (type(a) != str) or (type(b) != str):
-        print("0")
-    elif a == b:
-        print("1")
-    elif a != b and len(a) > len(b):
-        print("2")
-    elif a != b and b == "learn":
-        print("3")
 
-
+str1, str2 = 777, "hello"
+get = two_strings(str1, str2)
+print(get)
+str1, str2 = "hello", "hello"
+get = two_strings(str1, str2)
+print(get)
+str1, str2 = "hello world", "hello"
+get = two_strings(str1, str2)
+print(get)
+str1, str2 = "hello", "learn"
+get = two_strings(str1, str2)
+print(get)
 if __name__ == "__main__":
     main()
