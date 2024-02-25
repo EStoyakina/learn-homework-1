@@ -14,17 +14,16 @@ def hello_user():
     """
     Замените pass на ваш код
     """
-    while True:
-        user_say = input("Как дела? ")
-        if user_say == "Хорошо":
-            try:
+    try:
+        while True:
+            user_say = input("Как дела? ")
+            if user_say == "Хорошо":
                 print("Рад за тебя")
-            except KeyboardInterrupt:
-                print("Пока!")
-            break
-        else:
-            print(user_say)
-
+                break
+            else:
+                print(user_say)
+    except KeyboardInterrupt:
+        print("Пока!")
 
 
 
