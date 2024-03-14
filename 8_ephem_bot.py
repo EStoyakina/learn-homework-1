@@ -42,6 +42,8 @@ def talk_to_me(update, _):
 # Названия всего-всего в коде должно быть более информативным.
 # Каждая функция своим названием должна говорить, что она делает
 def get_constellation_by_planet_name(update, _):
+
+    # Входящую строку делим по пробельным символам и пакуем в список, например: /planet Mars -> ['/planet', 'Mars']
     text_list = update.message.text.split()
 
     # Пришла команда с дополнительным параметром
@@ -88,7 +90,7 @@ def get_constellation_by_planet_name(update, _):
 
 
 def main():
-    # Можно забыть вставить Telegram, проверяем этот случай
+    # Можно забыть вставить Telegram Token, проверяем этот случай
     token = settings.TOKEN
     if not token:
         # Класс информирования "критический": вывести ошибку
